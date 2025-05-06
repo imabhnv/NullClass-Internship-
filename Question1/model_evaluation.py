@@ -4,7 +4,7 @@ from groq import Groq
 import re
 import nltk
 from nltk.corpus import stopwords
-from nltk.stem import PorterStemmer, WordNetLemmatizer
+from nltk.stem import WordNetLemmatizer
 
 nltk.download('stopwords')
 nltk.download('wordnet')
@@ -18,6 +18,7 @@ groq_client = Groq(api_key=GROQ_API_KEY)
 cohere_client = cohere.Client(COHERE_API_KEY)
 genai.configure(api_key=GOOGLE_API_KEY)
 
+#For comparison 
 prompts = [
     "The impact of artificial intelligence on education"
 ]
