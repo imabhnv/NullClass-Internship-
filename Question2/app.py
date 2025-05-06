@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 import google.generativeai as genai
 from vector_store import load_vector_store, update_vector_store, load_data
-from performance_metrics import calculate_performance_metrics  # 🔁 Import added
+from performance_metrics import calculate_performance_metrics 
 
 # CONFIG
 st.set_page_config(page_title="🤖 Smart Vector Chatbot")
@@ -13,8 +13,8 @@ st.markdown("<h1 style='color: white;font-family: consolas;'>🧠 JARVIS: Dynami
 
 
 # KEYS
-GOOGLE_API_KEY = "AIzaSyBz830luF6uDWgqht5ngyw34l-KWNxUXr0"
-NEWS_API_KEY = "21990c5e0a7c4665988c00df75e6c841"
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+NEWS_API_KEY = st.secrets["NEWS_API_KEY"]
 
 # Function to call Gemini with strict instructions
 def generate_with_google(prompt):
