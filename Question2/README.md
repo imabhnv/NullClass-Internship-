@@ -1,6 +1,7 @@
 # 🧠 JARVIS: Dynamic Vector-Based Chatbot
 
-A smart chatbot that answers based purely on the data provided by the user. It fetches domain-specific news, stores it as memory, and responds to queries strictly using that memory — no assumptions, no hallucinations.
+- [Live App](https://imabhnv-dynamic-vectorchatbot.streamlit.app/)
+- A smart chatbot that answers based purely on the data provided by the user. It fetches domain-specific news, stores it as memory, and responds to queries strictly using that memory — no assumptions, no hallucinations.
 
 ## 🚀 Features
 
