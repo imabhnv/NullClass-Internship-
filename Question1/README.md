@@ -96,8 +96,6 @@ This script will:
 - [Groq SDK](https://groq.com/)
 - [Google Generative AI SDK](https://ai.google.dev/)
 - [Cohere API](https://cohere.com/)
-- [NLTK Library](https://www.nltk.org/)
-- [Evaluate Library (Huggingface)](https://huggingface.co/docs/evaluate/index)
 
 ---
 
