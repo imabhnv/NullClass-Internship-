@@ -1,23 +1,24 @@
+
 # 📝 Article Generator Showdown using 3 Powerful LLMs
 
 - 🔴 [Live Demo](https://imabhnv-article-generator.streamlit.app/)
 
-This project is a **Streamlit-based intelligent article generator** powered by 3 top-tier open-source and commercial LLMs:
+This project is a **Streamlit-based intelligent article generator and evaluator** powered by 3 top-tier LLMs:
 
 - **Gemma (via Groq SDK)**
-- **Gemini (via Google Generative AI SDK)**
+- **Gemini-Pro (via Google Generative AI SDK)**
 - **Cohere Command-R**
 
-🔍 After generation, articles are **automatically evaluated by LLaMA3 (70B)** to decide which model performed the best based on structure, coherence, facts, and style.
+🔍 After generation, articles from all 3 models are **automatically evaluated by LLaMA3 (70B)** based on relevance, structure, depth, clarity, and coherence.
 
 ---
 
 ## 🚀 Features
 
-- Generate detailed articles on **any topic entered by the user**.
-- Automatically compare outputs from all 3 models using **LLaMA3 evaluator**.
-- Clean and powerful **Streamlit interface** — no dropdowns or manual model selection.
-- Real-time **AI-powered verdict** on the best model for every topic.
+- Generate detailed articles on **any topic** using a selected LLM.
+- Compare article quality from all 3 LLMs using a **LLaMA3-powered evaluator**.
+- Clean, tab-based **Streamlit interface** — one for article generation, one for evaluation.
+- Real-time, **AI-generated scoring and winner analysis**.
 
 ---
 
@@ -40,13 +41,7 @@ pip install -r requirements.txt
 
 ## 🔑 API Keys Required
 
-You need the following API keys to run this project:
-
-- **Groq API Key** (for Gemma + LLaMA3)
-- **Google Generative AI API Key** (for Gemini)
-- **Cohere API Key** (for Cohere Command-R)
-
-Use Streamlit secrets for key security. Add this to `.streamlit/secrets.toml`:
+Add the following keys to `.streamlit/secrets.toml`:
 
 ```toml
 GROQ_API_KEY = "your-groq-api-key"
@@ -54,49 +49,42 @@ GOOGLE_API_KEY = "your-google-api-key"
 COHERE_API_KEY = "your-cohere-api-key"
 ```
 
+These are used for:
+- **Gemma & LLaMA3** → Groq
+- **Gemini-Pro** → Google Generative AI
+- **Command-R** → Cohere
+
 ---
 
 ## 📜 How to Run
 
-### Run the Streamlit App
+Launch the app with:
 
 ```bash
 streamlit run app.py
 ```
 
-This will launch a web app where you enter a topic, and it generates + compares article outputs automatically.
-
----
-
-### Run the Evaluation Script (Optional)
-
-```bash
-python model_evaluation.py
-```
-
-This script:
-- Uses 3 sample prompts
-- Generates articles from each LLM
-- Asks LLaMA3 to declare a winner for each
+You'll get a 2-tab interface:
+- **Generate Article** using any one model.
+- **Compare All Models** to find the best using LLaMA3.
 
 ---
 
 ## 📂 Project Structure
 
 ```
-├── app.py                   # Main Streamlit app for article generation + evaluation
-├── model_evaluation.py      # Optional script for batch evaluation using prompts
-├── requirements.txt         # All Python dependencies
-└── README.md                # Project documentation
+├── app.py               # Main Streamlit app (UI + model evaluation logic)
+├── requirements.txt     # Python dependencies
+└── README.md            # Project documentation
 ```
 
 ---
 
 ## 🙌 Acknowledgements
 
-- [Groq](https://groq.com/) for ultra-fast inference
+- [Groq](https://groq.com/) – for lightning-fast inference
 - [Google Generative AI](https://ai.google.dev/)
-- [Cohere AI](https://cohere.com/)
+- [Cohere](https://cohere.com/)
 
 ---
 
