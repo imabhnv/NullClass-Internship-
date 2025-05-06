@@ -1,23 +1,23 @@
+# 📝 Article Generator Showdown using 3 Powerful LLMs
 
-# 📝 Article Generator Chatbot using 3 Powerful LLMs
+- 🔴 [Live Demo](https://imabhnv-article-generator.streamlit.app/)
 
-- [Live App](https://imabhnv-article-generator.streamlit.app/)
-### This project provides a **Streamlit**-based chatbot to **generate articles** using three cutting-edge LLMs:
+This project is a **Streamlit-based intelligent article generator** powered by 3 top-tier open-source and commercial LLMs:
 
 - **Gemma (via Groq SDK)**
-- **Google Gemini-Pro (via Generative AI SDK)**
+- **Gemini (via Google Generative AI SDK)**
 - **Cohere Command-R**
 
-Additionally, an **evaluation script** (`model_evaluation.py`) is provided to **compare the performance** of these models using **llama LLM**.
+🔍 After generation, articles are **automatically evaluated by LLaMA3 (70B)** to decide which model performed the best based on structure, coherence, facts, and style.
 
 ---
 
 ## 🚀 Features
 
-- Generate high-quality articles on any topic.
-- Choose between three different LLMs.
-- Clean and pre-process input topics using NLP techniques.
-- Simple and beautiful Streamlit interface.
+- Generate detailed articles on **any topic entered by the user**.
+- Automatically compare outputs from all 3 models using **LLaMA3 evaluator**.
+- Clean and powerful **Streamlit interface** — no dropdowns or manual model selection.
+- Real-time **AI-powered verdict** on the best model for every topic.
 
 ---
 
@@ -30,7 +30,7 @@ git clone https://github.com/imabhnv/article-generator-chatBot.git
 cd article-generator-chatBot
 ```
 
-2. Install the dependencies:
+2. Install the required packages:
 
 ```bash
 pip install -r requirements.txt
@@ -40,15 +40,15 @@ pip install -r requirements.txt
 
 ## 🔑 API Keys Required
 
-You need to insert your API keys in `main.py` and `model_evaluation.py`:
+You need the following API keys to run this project:
 
-- **Groq API Key**
-- **Google Generative AI API Key**
-- **Cohere API Key**
+- **Groq API Key** (for Gemma + LLaMA3)
+- **Google Generative AI API Key** (for Gemini)
+- **Cohere API Key** (for Cohere Command-R)
 
-Replace the placeholders:
+Use Streamlit secrets for key security. Add this to `.streamlit/secrets.toml`:
 
-```python
+```toml
 GROQ_API_KEY = "your-groq-api-key"
 GOOGLE_API_KEY = "your-google-api-key"
 COHERE_API_KEY = "your-cohere-api-key"
@@ -58,35 +58,35 @@ COHERE_API_KEY = "your-cohere-api-key"
 
 ## 📜 How to Run
 
-### For Chatbot UI (Streamlit)
+### Run the Streamlit App
 
 ```bash
-streamlit run main.py
+streamlit run app.py
 ```
 
-This will launch a web app where you can select a model and input your topic.
+This will launch a web app where you enter a topic, and it generates + compares article outputs automatically.
 
 ---
 
-### For Model Evaluation (Performance Metrics)
+### Run the Evaluation Script (Optional)
 
 ```bash
 python model_evaluation.py
 ```
 
-This script will:
-- Generate articles for sample prompts.
-- Compare models.
-- Display the best performing model.
+This script:
+- Uses 3 sample prompts
+- Generates articles from each LLM
+- Asks LLaMA3 to declare a winner for each
 
 ---
 
 ## 📂 Project Structure
 
 ```
-├── main.py                 # Streamlit UI for article generation
-├── model_evaluation.ipynb   # Script for model performance comparison
-├── requirements.txt         # Required Python libraries
+├── app.py                   # Main Streamlit app for article generation + evaluation
+├── model_evaluation.py      # Optional script for batch evaluation using prompts
+├── requirements.txt         # All Python dependencies
 └── README.md                # Project documentation
 ```
 
@@ -94,9 +94,9 @@ This script will:
 
 ## 🙌 Acknowledgements
 
-- [Groq SDK](https://groq.com/)
-- [Google Generative AI SDK](https://ai.google.dev/)
-- [Cohere API](https://cohere.com/)
+- [Groq](https://groq.com/) for ultra-fast inference
+- [Google Generative AI](https://ai.google.dev/)
+- [Cohere AI](https://cohere.com/)
 
 ---
 
