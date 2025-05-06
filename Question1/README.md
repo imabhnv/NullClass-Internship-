@@ -3,7 +3,7 @@
 
 This project provides a **Streamlit**-based chatbot to **generate articles** using three cutting-edge LLMs:
 
-- **GROQ (DeepSeek Llama 70B)**
+- **Gemma (Via Groq SDK)**
 - **Google Gemini-Pro (via Generative AI SDK)**
 - **Cohere Command-R**
 
