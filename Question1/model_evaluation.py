@@ -1,3 +1,4 @@
+#Run this file to compare these models
 import google.generativeai as genai
 import cohere
 from groq import Groq
