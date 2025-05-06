@@ -20,8 +20,6 @@ def preprocess_text(text):
     text = re.sub(r'[^a-zA-Z\s]', '', text)
     tokens = text.split()
     tokens = [word for word in tokens if word not in stopwords.words('english')]
-    stemmer = PorterStemmer()
-    tokens = [stemmer.stem(word) for word in tokens]
     lemmatizer = WordNetLemmatizer()
     tokens = [lemmatizer.lemmatize(word) for word in tokens]
     return ' '.join(tokens)
@@ -87,7 +85,7 @@ if st.button("Generate Article"):
     if user_topic:
         with st.spinner('Generating your article, please wait... 🚀'):
             processed_topic = preprocess_text(user_topic)
-            final_prompt = f"Write a detailed and informative article on: {processed_topic}"
+            final_prompt = f"Write a detailed and informative article with proper conclusion on: {processed_topic}"
 
             if "GROQ" in selected_model:
                 article = generate_with_groq(final_prompt)
