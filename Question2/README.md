@@ -37,13 +37,6 @@
 - Matches model-predicted response with the actual context retrieved.
 - Outputs match % to evaluate retrieval performance.
 
-## ⚙️ Requirements
-
-Install the required packages with:  
-
-```bash
-pip install -r requirements.txt
-```
 
 ## 🧠 Notes
 
