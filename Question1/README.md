@@ -22,23 +22,6 @@ This project is a **Streamlit-based intelligent article generator and evaluator*
 
 ---
 
-## 🛠️ Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/imabhnv/article-generator-chatBot.git
-cd article-generator-chatBot
-```
-
-2. Install the required packages:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
 ## 🔑 API Keys Required
 
 Add the following keys to `.streamlit/secrets.toml`:
@@ -55,14 +38,6 @@ These are used for:
 - **Command-R** → Cohere
 
 ---
-
-## 📜 How to Run
-
-Launch the app with:
-
-```bash
-streamlit run app.py
-```
 
 You'll get a 2-tab interface:
 - **Generate Article** using any one model.
@@ -82,9 +57,10 @@ You'll get a 2-tab interface:
 
 ## 🙌 Acknowledgements
 
-- [Groq](https://groq.com/) – for lightning-fast inference
+- [Groq](https://groq.com/) 
 - [Google Generative AI](https://ai.google.dev/)
 - [Cohere](https://cohere.com/)
+- [Streamlit](https://streamlit.io/)
 
 ---
 
