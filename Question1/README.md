@@ -93,7 +93,7 @@ Higher BLEU scores indicate better performance.
 
 ```
 ├── main.py                 # Streamlit UI for article generation
-├── model_evaluation.py      # Script for model performance comparison
+├── model_evaluation.ipynb      # Script for model performance comparison
 ├── requirements.txt         # Required Python libraries
 └── README.md                # Project documentation
 ```
