@@ -1,7 +1,8 @@
 
 # 📝 Article Generator Chatbot using 3 Powerful LLMs
 
-This project provides a **Streamlit**-based chatbot to **generate articles** using three cutting-edge LLMs:
+- [Live App](https://imabhnv-article-generator.streamlit.app/)
+### This project provides a **Streamlit**-based chatbot to **generate articles** using three cutting-edge LLMs:
 
 - **Gemma (via Groq SDK)**
 - **Google Gemini-Pro (via Generative AI SDK)**
