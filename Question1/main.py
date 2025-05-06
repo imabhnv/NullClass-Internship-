@@ -42,7 +42,7 @@ def generate_with_groq(prompt):
             model="deepseek-r1-distill-llama-70b",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.7,
-            max_tokens=500
+            max_tokens=1024
         )
         if chat_completion.choices:
             return chat_completion.choices[0].message.content
@@ -66,7 +66,7 @@ def generate_with_cohere(prompt):
             model="command-r",  
             message=prompt,
             temperature=0.7,
-            max_tokens=500
+            max_tokens=1024
         )
         return response.text
     except Exception as e:
