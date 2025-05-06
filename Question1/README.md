@@ -110,4 +110,4 @@ Higher BLEU scores indicate better performance.
 
 ---
 
-## ✨ Made with ❤️ by Abhinav Varshney
+## ✨ Made with 💻❤️ by Abhinav Varshney
