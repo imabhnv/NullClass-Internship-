@@ -52,4 +52,4 @@ pip install -r requirements.txt
 
 ---
 
-Made with 💻 by JARVIS for Sir Abhinav 🚀
+Made with 💻♥️ by Abhinav Varshney🚀
