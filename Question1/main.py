@@ -37,7 +37,7 @@ cohere_client = cohere.Client(COHERE_API_KEY)
 def generate_with_groq(prompt):
     try:
         chat_completion = groq_client.chat.completions.create(
-            model="deepseek-r1-distill-llama-70b",
+            model="gemma2-9b-it",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.7,
             max_tokens=1024
@@ -76,7 +76,7 @@ st.markdown("""---""")
 
 selected_model = st.selectbox(
     "Select a Model to Generate Article:",
-    ["GROQ (DeepSeek Llama)", "Google Generative AI (Gemini-Pro)", "Cohere (Command-R)"]
+    ["Gemma", "Gemini-Pro", "Command-R"]
 )
 
 user_topic = st.text_input("Enter Topic for Article:")
