@@ -7,7 +7,7 @@ This project provides a **Streamlit**-based chatbot to **generate articles** usi
 - **Google Gemini-Pro (via Generative AI SDK)**
 - **Cohere Command-R**
 
-Additionally, an **evaluation script** (`model_evaluation.py`) is provided to **compare the performance** of these models using **BLEU score**.
+Additionally, an **evaluation script** (`model_evaluation.py`) is provided to **compare the performance** of these models using **llama LLM**.
 
 ---
 
@@ -16,7 +16,6 @@ Additionally, an **evaluation script** (`model_evaluation.py`) is provided to **
 - Generate high-quality articles on any topic.
 - Choose between three different LLMs.
 - Clean and pre-process input topics using NLP techniques.
-- Performance evaluation based on BLEU metric.
 - Simple and beautiful Streamlit interface.
 
 ---
@@ -76,16 +75,8 @@ python model_evaluation.py
 
 This script will:
 - Generate articles for sample prompts.
-- Compute BLEU scores.
 - Compare models.
 - Display the best performing model.
-
----
-
-## 📊 Evaluation Metric
-
-We use **BLEU Score** to measure the quality of generated text compared to a reference text.  
-Higher BLEU scores indicate better performance.
 
 ---
 
