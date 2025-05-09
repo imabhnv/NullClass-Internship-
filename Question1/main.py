@@ -25,9 +25,9 @@ def preprocess_text(text):
     return ' '.join(tokens)
 
 # API Keys
-GROQ_API_KEY = "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"
-GOOGLE_API_KEY = "AIzaSyBz830luF6uDWgqht5ngyw34l-KWNxUXr0"
-COHERE_API_KEY = "kteKmqxtDuJhLHfkfWazGPfkZUu81u3b67ux124S"
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+COHERE_API_KEY = st.secrets["COHERE_API_KEY"]
 
 # Initialize Clients
 groq_client = Groq(api_key=GROQ_API_KEY)
