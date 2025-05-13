@@ -61,22 +61,44 @@ def generate_embeddings_batched(texts, model, batch_size=None):
     
     return np.vstack(embeddings)
 
+# def load_optimized_llm(model_name="facebook/opt-125m"):
+#     os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
+#     tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+#     model = AutoModelForCausalLM.from_pretrained(
+#         model_name,
+#         torch_dtype=torch.float32,
+#         device_map={"": "cpu"},
+#         low_cpu_mem_usage=True
+#     )
+
+#     if tokenizer.pad_token is None:
+#         tokenizer.pad_token = tokenizer.eos_token
+
+#     return model, tokenizer
 def load_optimized_llm(model_name="facebook/opt-125m"):
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        torch_dtype=torch.float32,
-        device_map={"": "cpu"},
-        low_cpu_mem_usage=True
-    )
+    try:
+        model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            torch_dtype=torch.float32,
+            low_cpu_mem_usage=True  # ✅ Safe fallback
+        )
+    except Exception as e:
+        print(f"⚠️ Failed with optimized settings. Retrying with default CPU load. Error: {e}")
+        model = AutoModelForCausalLM.from_pretrained(model_name)  # 🛑 Streamlit-safe fallback
 
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
     return model, tokenizer
+
+
+
 
 def check_model_compatibility(model_name):
     """Check if the model is lightweight and suitable for CPU-only usage."""
