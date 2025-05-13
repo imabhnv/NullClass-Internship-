@@ -5,6 +5,8 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
+import os
+import gdown
 
 from optimize_cpu import (
     optimize_memory, 
@@ -21,13 +23,20 @@ available_models = [
     "distilgpt2"
 ]
 
-# 📁 Hardcoded Dataset Path
-DATASET_PATH = r"output.json"
-
 # ================== 🔁 CACHES ====================
 
 @st.cache_data(show_spinner=False)
-def load_data(file_path):
+def load_data():
+    file_path = 'data/output.json'
+    
+    if not os.path.exists(file_path):
+        st.warning("Dataset not found locally. Downloading from Google Drive...", icon="📥")
+        # Replace this with your actual file ID
+        file_id = "1bGPMru_zbwCd06JdTXyacjw2LHWVwqCm"  # Your Google Drive file ID
+        url = f"https://drive.google.com/uc?id={file_id}"
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        gdown.download(url, file_path, quiet=False)
+    
     df = pd.read_json(file_path)
     df = df[['title', 'abstract', 'categories']]
     return df
@@ -93,7 +102,7 @@ selected_model = st.sidebar.selectbox("Select LLM model", available_models)
 
 # Load dataset & embeddings
 with st.spinner("Loading data and generating embeddings..."):
-    df = load_data(DATASET_PATH)
+    df = load_data()
     embeddings, embedding_model = get_embeddings(df['abstract'].tolist())
     model, tokenizer = load_llm(selected_model)
 
@@ -137,6 +146,7 @@ EXPLANATION:"""
 
                 st.markdown("### 🧠 Explanation")
                 st.success(explanation)
+
 with tab2:
     st.subheader("📄 Top 10 Relevant Papers (from your last query)")
     if 'top_papers' in st.session_state:
