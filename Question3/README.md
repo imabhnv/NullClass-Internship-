@@ -68,5 +68,5 @@ pip install -r requirements.txt
 - 💻 Three different models can generate different results from each other.
 - 😁 I also tried to add relevant emojis and comments in files.
 
-## Made with 💻♥️ by Abhinav Varshney
+## Made with 💻♥️ by Abhinav Varshney🚀
 ---
