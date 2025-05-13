@@ -22,7 +22,7 @@ available_models = [
 ]
 
 # 📁 Hardcoded Dataset Path
-DATASET_PATH = "data/output.json"
+DATASET_PATH = "output.json"
 
 # ================== 🔁 CACHES ====================
 
