@@ -61,6 +61,7 @@ def generate_embeddings_batched(texts, model, batch_size=None):
     
     return np.vstack(embeddings)
 
+#UNCOMMENT THIS PIECE OF CODE IF YOU'RE RUNNING THIS PROGRAM LOCALLY AND REMOVE THE BELOW FUNCTION
 # def load_optimized_llm(model_name="facebook/opt-125m"):
 #     os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
