@@ -22,23 +22,6 @@ This project is a **Streamlit-based intelligent article generator and evaluator*
 
 ---
 
-## 🛠️ Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/imabhnv/article-generator-chatBot.git
-cd article-generator-chatBot
-```
-
-2. Install the required packages:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
 ## 🔑 API Keys Required
 
 Add the following keys to `.streamlit/secrets.toml`:
