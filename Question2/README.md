@@ -4,6 +4,7 @@ A smart chatbot that answers based purely on the data provided by the user. It f
 
 ## 🚀 Features
 
+- [Live App](https://imabhnv-dynamic-vectorchatbot.streamlit.app/)
 - Chat directly with the memory-based chatbot.
 - Add new information manually via the interface.
 - Fetch live news articles on any topic and store them in memory.
