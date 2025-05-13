@@ -14,16 +14,15 @@ Each part of the project is organized in dedicated folders:
 
 ### 🔹 Question1 - Article Generator Chatbot
 
-> **Objective**: Compare three open-source LLMs (e.g., LLaMA 2, Mistral, GPT-Neo/OpenChat) and evaluate which one generates the best articles.
+> **Objective**: Compare three open-source LLMs and evaluate which one generates the best articles.
 
 **Features**:
 - Integrated three LLMs for article generation.
 - Text preprocessing using NLP techniques.
 - Evaluation based on coherence, fluency, and factual accuracy.
-- Performance metrics: BLEU Score, ROUGE Score, Human Evaluation.
 
 **Outcome**:
-- Comparative performance report.
+- Article Generation.
 - Identification of the best LLM for article creation.
 
 📂 Folder: [`Question1`](./Question1)
@@ -36,7 +35,6 @@ Each part of the project is organized in dedicated folders:
 
 **Features**:
 - Periodic crawling and fetching from data sources.
-- Vector DB update using FAISS.
 - `update_memory()` mechanism in place.
 - Memory-efficient and real-time knowledge ingestion.
 
@@ -54,7 +52,7 @@ Each part of the project is organized in dedicated folders:
 **Features**:
 - Preprocessing of large-scale scientific papers dataset.
 - Extraction of abstracts, titles, and category metadata.
-- RAG-based chatbot using FAISS + Open-source LLM (Mistral/OpenChat).
+- RAG-based chatbot using FAISS + Open-source LLMs.
 - Summarization + Explanation of complex research concepts.
 - Streamlit GUI with search and Q&A features.
 
@@ -63,19 +61,8 @@ Each part of the project is organized in dedicated folders:
   - Search & summarize research papers.
   - Explain advanced CS concepts.
   - Handle follow-up questions.
-  - Serve as an academic assistant.
 
 📂 Folder: [`Question3`](./Question3)
-
----
-
-## ⚙️ Tech Stack
-
-- Python, Streamlit, FAISS
-- Open-Source LLMs: LLaMA 2, Mistral, OpenChat, GPT-Neo
-- NLP: NLTK, spaCy, Gensim
-- Vector Store: FAISS
-- Evaluation Metrics: Precision, Recall, Confusion Matrix, BLEU, ROUGE
 
 ---
 
@@ -120,5 +107,6 @@ GitHub: [@imabhnv](https://github.com/imabhnv)
 ## 🔗 Project Link
 
 🔗 GitHub Repo: [https://github.com/imabhnv/NullClass-Internship-](https://github.com/imabhnv/NullClass-Internship-)
+🔗 LinkedIn : [https://www.linkedin.com/in/abhinav-varshney-bb9bb7204/](https://www.linkedin.com/in/abhinav-varshney-bb9bb7204/)
 
 ---
