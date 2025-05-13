@@ -1,9 +1,5 @@
 streamlit
-torch
-transformers
-evaluate
-nltk
-requests
 cohere
 google-generativeai
 groq
+nltk
