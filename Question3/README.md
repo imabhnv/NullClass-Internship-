@@ -1,6 +1,7 @@
 
 # 🤖 ArXiv Research Assistant Chatbot 📚
 
+[Live App](https://imabhnv-arxiv-chatbot.streamlit.app/)
 This project allows users to query a chatbot based on scientific papers related to computer science from the ArXiv dataset. The chatbot leverages NLP techniques, open-source LLMs, and Streamlit to provide answers and explanations.
 
 ## 🔁 Project Workflow
