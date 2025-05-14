@@ -1,12 +1,12 @@
 
-# 🚀 NullClass Internship Project🚀
+# 🚀 NullClass Internship Projects🚀
 
 This repository contains the complete work done for the NullClass internship project, focused on building intelligent and domain-specific chatbots using cutting-edge NLP techniques, open-source LLMs, and vector databases.
 
 Each part of the project is organized in dedicated folders:
-- [`Question1`](./Question1): Article Generator using 3 Open-Source LLMs
-- [`Question2`](./Question2): Dynamic Knowledge Base Update System
-- [`Question3`](./Question3): ArXiv Research Assistant Chatbot
+- [`Question1`](./Question1): Article Generator chatBot
+- [`Question2`](./Question2): Dynamic Knowledge Base Update System for a chatBot
+- [`Question3`](./Question3): ArXiv Research Assistant chatBot
 
 ---
 
@@ -14,7 +14,7 @@ Each part of the project is organized in dedicated folders:
 
 ### 🔹 Question1 - Article Generator Chatbot
 
-> **Objective**: Compare three open-source LLMs and evaluate which one generates the best articles.
+> **Objective**: Compare three LLMs and evaluate which one generates the best articles.
 
 **Features**:
 - Integrated three LLMs for article generation.
