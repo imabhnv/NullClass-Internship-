@@ -1,5 +1,5 @@
 
-# 🚀 NullClass Internship Project: Intelligent Chatbots with Open-Source LLMs
+# 🚀 NullClass Internship Project🚀
 
 This repository contains the complete work done for the NullClass internship project, focused on building intelligent and domain-specific chatbots using cutting-edge NLP techniques, open-source LLMs, and vector databases.
 
