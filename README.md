@@ -74,15 +74,6 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
----
-
-## 📊 Evaluation Metrics
-
-Each LLM and chatbot system is evaluated using:
-- Accuracy, Precision, Recall (for classification/evaluation)
-- Confusion Matrix
-- Human-level qualitative analysis
-- BLEU/ROUGE scores (for text generation)
 
 ---
 
@@ -98,7 +89,7 @@ Each LLM and chatbot system is evaluated using:
 
 ## 📌 Author
 
-**Abhinav**  
+**Abhinav Varshney**  
 Intern at NullClass | Aspiring Data Scientist  
 GitHub: [@imabhnv](https://github.com/imabhnv)
 
